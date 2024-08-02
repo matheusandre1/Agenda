@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Agenda.Domain.Base
 {
-    public class Entity<T>
+    public abstract class Entity<T>
     {
-        public T Id { get; private set; }
+        protected Entity() 
+        {
+            Id = Guid.NewGuid();
+        }
+        public Guid Id { get; protected set; }
     }
 }
