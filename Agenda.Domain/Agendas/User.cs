@@ -2,14 +2,14 @@
 
 namespace Agenda.Domain.Agenda
 {
-    public class Usuario: Entity<Guid>
+    public class User: Entity<Guid>
     {
-        public string Nome { get; set; }
+        public string Name { get; set; }
         public string Email { get; set; }
 
-        public void Update(string nome, string email)
+        public void Update(string name, string email)
         {
-            Nome = nome;
+            Name = name;
             Email = email;
         }
     }
